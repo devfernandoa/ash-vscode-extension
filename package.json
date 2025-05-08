@@ -1,0 +1,40 @@
+{
+    "name": "ash-lang",
+    "displayName": "Ash",
+    "description": "VS Code support for the Ash scripting language",
+    "version": "0.0.1",
+    "publisher": "FernandoAlzueta",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/devfernandoa/ash"
+    },
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "ash",
+                "aliases": [
+                    "Ash",
+                    "ash"
+                ],
+                "extensions": [
+                    ".ash"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "ash",
+                "scopeName": "source.ash",
+                "path": "./syntaxes/ash.tmLanguage.json"
+            }
+        ]
+    },
+    "icon": "icons/ash-icon.png"
+}

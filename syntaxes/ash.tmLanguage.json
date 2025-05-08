@@ -1,0 +1,48 @@
+{
+  "scopeName": "source.ash",
+  "name": "Ash",
+  "fileTypes": [
+    "ash"
+  ],
+  "patterns": [
+    {
+      "name": "keyword.control.ash",
+      "match": "\\b(let|function|if|else|for|in|while|return|echo|read)\\b"
+    },
+    {
+      "name": "storage.type.ash",
+      "match": "\\b(int|string|bool|void)\\b"
+    },
+    {
+      "name": "constant.language.boolean.ash",
+      "match": "\\b(true|false)\\b"
+    },
+    {
+      "name": "variable.parameter.ash",
+      "match": "(?<=\\()\\s*\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?=\\s*\\))"
+    },
+    {
+      "name": "variable.other.identifier.ash",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+    },
+    {
+      "name": "keyword.operator.ash",
+      "match": "(==|!=|<=|>=|\\+|-|\\*|/|%)"
+    },
+    {
+      "name": "string.quoted.double.ash",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.ash",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "comment.line.double-slash.ash",
+      "match": "//.*$"
+    }
+  ]
+}
