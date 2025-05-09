@@ -11,6 +11,10 @@
     "engines": {
         "vscode": "^1.70.0"
     },
+    "activationEvents": [
+        "onLanguage:ash"
+    ],
+    "main": "./extension.js",
     "categories": [
         "Languages"
     ],
@@ -34,7 +38,18 @@
                 "scopeName": "source.ash",
                 "path": "./syntaxes/ash.tmLanguage.json"
             }
-        ]
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Ash",
+            "properties": {
+                "ash.path": {
+                    "type": "string",
+                    "default": "ash",
+                    "description": "Path to the Ash parser binary"
+                }
+            }
+        }
     },
     "icon": "icons/ash-icon.png"
 }
